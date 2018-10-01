@@ -43,6 +43,6 @@ depend:
 	ln -sf `${GPP} -print-file-name=libstdc++.a`
 	rm -f dependencies_tmp dependencies_tmp.bak
 	touch dependencies_tmp
-	makedepend -f dependencies_tmp -Y -I ../../../src/lib ../../../src/lib/*.cpp ../../../src/tests/*.cpp ../../../src/design/*.cpp ../../../src/main/*.cpp ../../../src/split/*.cpp  ../../../src/tune/*.cpp ~../../usr/include/boost/*.cpp
+	makedepend -f dependencies_tmp -Y -I ../../../src/lib ../../../src/lib/*.cpp ../../../src/tests/*.cpp ../../../src/design/*.cpp ../../../src/main/*.cpp ../../../src/split/*.cpp  ../../../src/tune/*.cpp 
 	sed -e "s/^\.\.\/\.\.\/\.\.\/src\/[a-z]*\//.\//" dependencies_tmp > dependencies
 	rm -f dependencies_tmp dependencies_tmp.bak
